@@ -19,7 +19,7 @@ export default function SupportPage() {
       {/* Contact cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
         <div className="bg-white border border-[#E8E4DC] rounded-2xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">Email</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">General Support</p>
           <a
             href="mailto:projects@corex-ia.com"
             className="font-semibold text-[#6581FF] hover:underline break-all"
@@ -30,24 +30,31 @@ export default function SupportPage() {
         </div>
 
         <div className="bg-white border border-[#E8E4DC] rounded-2xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">Phone</p>
-          <div className="space-y-1">
-            <a href="tel:+50237568031" className="block font-semibold text-[#0F1117] hover:text-[#6581FF] transition-colors">
-              +502 3756 8031
-            </a>
-            <a href="tel:+50250169263" className="block font-semibold text-[#0F1117] hover:text-[#6581FF] transition-colors">
-              +502 5016 9263
-            </a>
-          </div>
-          <p className="text-sm text-[#6B6B68] mt-2">Mon–Fri, 9 am – 6 pm CT.</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">Privacy &amp; Data</p>
+          <a
+            href="mailto:privacy@corex-ia.com"
+            className="font-semibold text-[#6581FF] hover:underline break-all"
+          >
+            privacy@corex-ia.com
+          </a>
+          <p className="text-sm text-[#6B6B68] mt-2">Data deletion and privacy requests.</p>
         </div>
 
-        <div className="bg-white border border-[#E8E4DC] rounded-2xl p-6 sm:col-span-2">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">Office Address</p>
-          <address className="not-italic font-medium text-[#0F1117]">
-            99 Oatgrass Dr, Grayson, GA 30017<br />
-            United States
-          </address>
+        <div className="bg-white border border-[#E8E4DC] rounded-2xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">Security</p>
+          <a
+            href="mailto:security@corex-ia.com"
+            className="font-semibold text-[#6581FF] hover:underline break-all"
+          >
+            security@corex-ia.com
+          </a>
+          <p className="text-sm text-[#6B6B68] mt-2">Vulnerability reports and security concerns.</p>
+        </div>
+
+        <div className="bg-white border border-[#E8E4DC] rounded-2xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-2">Location</p>
+          <p className="font-medium text-[#0F1117]">United States &amp; Guatemala</p>
+          <p className="text-sm text-[#6B6B68] mt-2">Mon–Fri, 9 am – 6 pm CT.</p>
         </div>
       </div>
 

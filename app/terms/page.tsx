@@ -124,7 +124,7 @@ export default function TermsPage() {
           <h2 className="text-lg font-bold text-[#0F1117] mb-3">19. Contact</h2>
           <address className="not-italic space-y-1">
             <p><strong className="text-[#0F1117]">Corex IA, LLC</strong></p>
-            <p>99 Oatgrass Dr, Grayson, GA 30017, United States</p>
+            <p>Georgia, United States</p>
             <p>Email: <a href="mailto:legal@corex-ia.com" className="text-[#6581FF] hover:underline">legal@corex-ia.com</a></p>
           </address>
         </section>

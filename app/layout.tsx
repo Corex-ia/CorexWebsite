@@ -42,19 +42,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {/* Contact */}
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] mb-3">Contact</p>
-                <address className="not-italic text-sm text-[#6B6B68] space-y-1">
-                  <p>99 Oatgrass Dr, Grayson, GA 30017</p>
-                  <p>United States</p>
-                  <p className="mt-2">
-                    <a href="tel:+50237568031" className="hover:text-[#0F1117] transition-colors">+502 3756 8031</a>
-                  </p>
-                  <p>
-                    <a href="tel:+50250169263" className="hover:text-[#0F1117] transition-colors">+502 5016 9263</a>
-                  </p>
+                <div className="text-sm text-[#6B6B68] space-y-1">
+                  <p>United States &amp; Guatemala</p>
                   <p className="mt-2">
                     <a href="mailto:projects@corex-ia.com" className="hover:text-[#0F1117] transition-colors">projects@corex-ia.com</a>
                   </p>
-                </address>
+                </div>
               </div>
 
               {/* Legal links */}
