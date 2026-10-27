@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { ClipboardList, BookOpen, CreditCard, Stethoscope, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Corex IA — Intelligent Software for Growing Businesses',
@@ -12,32 +13,40 @@ const products = [
     tagline: 'Field Service Management',
     description: 'Work orders, CRM, estimates, invoicing, payroll, fleet, and more — all in one platform built for service businesses.',
     url: 'https://app.corex-ia.com',
-    color: 'bg-indigo-50 border-indigo-100',
-    icon: '⚙️',
+    Icon: ClipboardList,
+    iconBg: 'bg-[#EEF1FF]',
+    iconColor: 'text-[#6581FF]',
+    accent: 'group-hover:border-[#6581FF]',
   },
   {
     name: 'CorexChurch',
     tagline: 'Church Management',
     description: 'Member management, giving, events, small groups, and communications for modern congregations.',
     url: null,
-    color: 'bg-purple-50 border-purple-100',
-    icon: '✝️',
+    Icon: BookOpen,
+    iconBg: 'bg-purple-50',
+    iconColor: 'text-purple-500',
+    accent: 'group-hover:border-purple-300',
   },
   {
     name: 'CorexPay',
     tagline: 'Business Payments',
     description: 'Invoicing, card processing, ACH transfers, and financial reporting — payments made simple.',
     url: null,
-    color: 'bg-emerald-50 border-emerald-100',
-    icon: '💳',
+    Icon: CreditCard,
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    accent: 'group-hover:border-emerald-300',
   },
   {
     name: 'CorexHealth',
     tagline: 'Health & Wellness',
     description: 'Practice management software designed for clinics, wellness centers, and independent practitioners.',
     url: null,
-    color: 'bg-sky-50 border-sky-100',
-    icon: '🏥',
+    Icon: Stethoscope,
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-500',
+    accent: 'group-hover:border-sky-300',
   },
 ]
 
@@ -94,17 +103,19 @@ export default function Home() {
         <p className="text-xs font-semibold uppercase tracking-widest text-[#9A9A96] text-center mb-10">Our Products</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {products.map(p => (
-            <div key={p.name} className={`rounded-2xl border p-6 ${p.color}`}>
-              <div className="text-2xl mb-3">{p.icon}</div>
-              <h2 className="font-bold text-[#0F1117] mb-1">{p.name}</h2>
-              <p className="text-xs font-medium text-[#6581FF] uppercase tracking-wider mb-3">{p.tagline}</p>
-              <p className="text-sm text-[#6B6B68] leading-relaxed mb-4">{p.description}</p>
+            <div key={p.name} className={`group bg-white rounded-2xl border border-[#E8E4DC] p-6 flex flex-col transition-colors ${p.accent}`}>
+              <div className={`w-10 h-10 rounded-xl ${p.iconBg} flex items-center justify-center mb-5`}>
+                <p.Icon className={`w-5 h-5 ${p.iconColor}`} strokeWidth={1.75} />
+              </div>
+              <h2 className="font-semibold text-[#0F1117] mb-1">{p.name}</h2>
+              <p className="text-xs font-medium text-[#9A9A96] uppercase tracking-wider mb-3">{p.tagline}</p>
+              <p className="text-sm text-[#6B6B68] leading-relaxed mb-5 flex-1">{p.description}</p>
               {p.url ? (
-                <a href={p.url} className="text-xs font-semibold text-[#6581FF] hover:underline">
-                  Open app →
+                <a href={p.url} className="inline-flex items-center gap-1 text-xs font-semibold text-[#6581FF] hover:gap-2 transition-all">
+                  Open app <ArrowRight className="w-3 h-3" />
                 </a>
               ) : (
-                <span className="text-xs font-semibold text-[#9A9A96]">Coming soon</span>
+                <span className="text-xs font-medium text-[#C4C4BF] tracking-wide">Coming soon</span>
               )}
             </div>
           ))}
